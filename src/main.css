@@ -903,6 +903,7 @@ ul.posts article header > :last-child {
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
+  margin-top: 1.5rem;
 }
 .post > footer .stats {
   cursor: default;
@@ -1040,6 +1041,7 @@ ul.posts article header > :last-child {
     -moz-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
+
   .post > footer .stats {
     text-align: center;
   }

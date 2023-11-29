@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatDate } from "../formatDate";
+import Markdown from "react-markdown";
 
 const Post = ({
   _id: id,
@@ -32,7 +33,8 @@ const Post = ({
 
       <img className="image featured" src={blogImg} alt={title} />
 
-      <p className="mini-desc">{blogDesc}</p>
+      <Markdown className="mini-desc">{blogDesc}</Markdown>
+
       <footer>
         <ul className="actions">
           <li>

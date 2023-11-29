@@ -14,7 +14,6 @@ const Navbar = () => {
       <NavLinks />
       <nav className="main">
         <ul>
-          {/* {width > 1280 ? <Searchbar /> : null} */}
           {width <= 1280 ? (
             <li className="menu">
               <a className="fa-bars" onClick={toggleMenu}>

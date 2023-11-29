@@ -1,4 +1,5 @@
 import { formatDate } from "../formatDate";
+import Markdown from "react-markdown";
 
 const SinglePost = ({
   title,
@@ -30,7 +31,7 @@ const SinglePost = ({
       <span className="image featured">
         <img src={blogImg} alt={blogAlt} />
       </span>
-      <p>{blogDesc}</p>
+      <Markdown>{blogDesc}</Markdown>
       <footer>
         <ul className="stats">
           <li>

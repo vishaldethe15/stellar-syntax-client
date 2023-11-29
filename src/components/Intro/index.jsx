@@ -1,11 +1,11 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
     <section id="intro">
-      <a href="#" className="logo">
+      <Link to="/" className="logo">
         <img src="/src/assets/logo.gif" alt="logo" />
-      </a>
+      </Link>
       <header>
         <h2>Stellar Syntax</h2>
         <p>From Code to Creation</p>

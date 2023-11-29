@@ -10,9 +10,9 @@ const Pagination = ({ limit }) => {
         <button
           onClick={decrementPageNumber}
           className={
-            pageNumber > 0
-              ? `button large previous`
-              : `disabled button large previous`
+            pageNumber <= 0
+              ? `disabled button large previous`
+              : `button large previous`
           }
         >
           Previous Page
@@ -23,7 +23,9 @@ const Pagination = ({ limit }) => {
         <button
           onClick={incrementPageNumber}
           className={
-            limit == 0 ? "disabled button large next" : "button large next"
+            pageNumber == limit - 1
+              ? "disabled button large next"
+              : "button large next"
           }
         >
           Next Page

@@ -7,9 +7,7 @@ import FeaturedPostWrapper from "../components/wrappers/FeaturedPostWrapper";
 import Intro from "../components/Intro";
 import Menu from "../components/Navbar/Menu";
 import About from "../components/Sidebar/About";
-//import Post from "../components/PostContainer/Post";
 import Pagination from "../components/PostContainer/Pagination";
-//import MiniPost from "../components/Sidebar/MiniPost";
 import Loader from "../components/loader";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../Context";
@@ -29,11 +27,16 @@ const CategorizedBlogsPage = () => {
 
   const blogData = data?.blogs;
 
+  const limit = data?.totalPages;
+
+  console.log(limit);
+
   if (loading) {
     return <Loader />;
   }
 
   if (error) {
+    console.log(error);
     return <p>Error: {error.message}</p>;
   }
 
@@ -46,13 +49,13 @@ const CategorizedBlogsPage = () => {
 
         {blogData?.map((blog) => {
           return (
-            <Suspense fallback={<Loader />}>
-              <Post key={blog._id} {...blog} />
+            <Suspense key={blog._id} fallback={<Loader />}>
+              <Post {...blog} />
             </Suspense>
           );
         })}
 
-        <Pagination />
+        <Pagination limit={limit} />
       </PostsWrapper>
 
       <SidebarWrapper>
@@ -60,8 +63,8 @@ const CategorizedBlogsPage = () => {
         <FeaturedPostWrapper>
           {blogData?.map((blog) =>
             blog.featured ? (
-              <Suspense fallback={<Loader />}>
-                <MiniPost key={blog._id} {...blog} />
+              <Suspense key={blog._id} fallback={<Loader />}>
+                <MiniPost {...blog} />
               </Suspense>
             ) : null
           )}
