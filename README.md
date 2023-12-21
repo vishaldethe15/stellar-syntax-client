@@ -12,6 +12,7 @@ Stellar Syntax represents my personal blog website, a comprehensive full-stack b
 - Server-side Pagination functionality
 - Responsive Design
 - Reusable Components
+- Markdown content
 
 
 ### Screenshots
