@@ -4,13 +4,15 @@ Stellar Syntax represents my personal blog website, a comprehensive full-stack b
 
 ### Features
 
-- Dynamic Routes
-- Advanced Filtering
+- Server-side dynamic routing
+- Advanced server-side Filtering
   - Filtering Based on Relations Between Each Blog
   - Filtering by Tags Associated with Blogs
   - Filtering based on featured or not
+- Server-side Pagination functionality
 - Responsive Design
 - Reusable Components
+
 
 ### Screenshots
 
