@@ -14,9 +14,9 @@ Stellar Syntax represents my personal blog website, a comprehensive full-stack b
 
 ### Screenshots
 
-![HomePage](/homepage.png "Stellar Syntax Homepage")
+![HomePage](public/homepage.png "Stellar Syntax Homepage")
 
-![SingleBlogPage](/homepage.png "Stellar Syntax SingleBlogPage")
+![SingleBlogPage](public/singleBlogPage.png "Stellar Syntax SingleBlogPage")
 
 ### Link to server side application
 
